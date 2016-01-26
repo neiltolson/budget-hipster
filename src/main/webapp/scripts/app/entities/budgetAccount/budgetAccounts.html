@@ -1,0 +1,76 @@
+<div>
+    <h2>BudgetAccounts</h2>
+    <jh-alert></jh-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="budgetAccount.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span 
+                       >Create new BudgetAccount
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span>ID</span></th>
+                    <th><span>UserId</span></th>
+                    <th><span>AccountType</span></th>
+                    <th><span>Name</span></th>
+                    <th><span>SubAccountName</span></th>
+                    <th><span>StartDate</span></th>
+                    <th><span>EndDate</span></th>
+                    <th><span>LastUpdated</span></th>
+                    <th><span>Status</span></th>
+                    <th><span>Notes</span></th>
+                    <th><span>StartBalance</span></th>
+                    <th><span>SortOrder</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="budgetAccount in budgetAccounts track by budgetAccount.id">
+                    <td><a ui-sref="budgetAccount.detail({id:budgetAccount.id})">{{budgetAccount.id}}</a></td>
+                    <td>{{budgetAccount.userId}}</td>
+                    <td translate="{{'budgetApp.BudgetAccountType.' + budgetAccount.accountType}}">{{budgetAccount.accountType}}</td>
+                    <td>{{budgetAccount.name}}</td>
+                    <td>{{budgetAccount.subAccountName}}</td>
+                        <td>{{budgetAccount.startDate | date:'mediumDate'}}</td>
+                        <td>{{budgetAccount.endDate | date:'mediumDate'}}</td>
+                    <td>{{budgetAccount.lastUpdated | date:'medium'}}</td>
+                    <td translate="{{'budgetApp.BudgetAccountStatus.' + budgetAccount.status}}">{{budgetAccount.status}}</td>
+                    <td>{{budgetAccount.notes}}</td>
+                    <td>{{budgetAccount.startBalance}}</td>
+                    <td>{{budgetAccount.sortOrder}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="budgetAccount.detail({id:budgetAccount.id})"
+                                    class="btn btn-info btn-sm"> 
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="budgetAccount.edit({id:budgetAccount.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="budgetAccount.delete({id:budgetAccount.id})"
+                                    class="btn btn-danger btn-sm">                                    
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

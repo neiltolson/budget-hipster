@@ -1,0 +1,58 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "budgetAccount",
+            "otherEntityName": "budgetAccount",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "transactionDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "transactionType",
+            "fieldType": "TransactionType",
+            "fieldValues": "Purchase, Deposit, Transfer, Credit_Payment, Purchase_Sink_Fund, Deposit_Sink_Fund"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "amount",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "notes",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "checkNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "transferTransactionId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldId": 8,
+            "fieldName": "reconciledDate",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "changelogDate": "20160124223835",
+    "dto": "no",
+    "service": "no",
+    "pagination": "pager"
+}

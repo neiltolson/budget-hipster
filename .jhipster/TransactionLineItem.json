@@ -1,0 +1,34 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "budgetLineItem",
+            "otherEntityName": "budgetLineItem",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "category.name"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "budgetAccountTransaction",
+            "otherEntityName": "budgetAccountTransaction",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "description"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "amount",
+            "fieldType": "BigDecimal"
+        }
+    ],
+    "changelogDate": "20160124224137",
+    "dto": "no",
+    "service": "no",
+    "pagination": "no"
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <include file="classpath:config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160124213650_added_entity_Budget.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160124214947_added_entity_Category.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/initial_categories.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160124220821_added_entity_BudgetLineItem.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160124222744_added_entity_BudgetAccount.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160124223835_added_entity_BudgetAccountTransaction.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160124224137_added_entity_TransactionLineItem.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160124224654_added_entity_UserPrefs.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160125011256_added_entity_BudgetIncome.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+</databaseChangeLog>

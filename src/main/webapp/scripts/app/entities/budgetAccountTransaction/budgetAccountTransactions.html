@@ -1,0 +1,75 @@
+<div>
+    <h2>BudgetAccountTransactions</h2>
+    <jh-alert></jh-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="budgetAccountTransaction.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span 
+                       >Create new BudgetAccountTransaction
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="predicate" ascending="reverse" callback="loadAll()">
+                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="transactionDate"><span>TransactionDate</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="transactionType"><span>TransactionType</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="description"><span>Description</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="amount"><span>Amount</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="notes"><span>Notes</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="checkNumber"><span>CheckNumber</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="transferTransactionId"><span>TransferTransactionId</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="reconciledDate"><span>ReconciledDate</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="budgetAccount.name"><span>budgetAccount</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="budgetAccountTransaction in budgetAccountTransactions track by budgetAccountTransaction.id">
+                    <td><a ui-sref="budgetAccountTransaction.detail({id:budgetAccountTransaction.id})">{{budgetAccountTransaction.id}}</a></td>
+                        <td>{{budgetAccountTransaction.transactionDate | date:'mediumDate'}}</td>
+                    <td translate="{{'budgetApp.TransactionType.' + budgetAccountTransaction.transactionType}}">{{budgetAccountTransaction.transactionType}}</td>
+                    <td>{{budgetAccountTransaction.description}}</td>
+                    <td>{{budgetAccountTransaction.amount}}</td>
+                    <td>{{budgetAccountTransaction.notes}}</td>
+                    <td>{{budgetAccountTransaction.checkNumber}}</td>
+                    <td>{{budgetAccountTransaction.transferTransactionId}}</td>
+                        <td>{{budgetAccountTransaction.reconciledDate | date:'mediumDate'}}</td>
+                    <td>
+                        <a ui-sref="budgetAccount.detail({id:budgetAccountTransaction.budgetAccount.id})">{{budgetAccountTransaction.budgetAccount.name}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="budgetAccountTransaction.detail({id:budgetAccountTransaction.id})"
+                                    class="btn btn-info btn-sm"> 
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="budgetAccountTransaction.edit({id:budgetAccountTransaction.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="budgetAccountTransaction.delete({id:budgetAccountTransaction.id})"
+                                    class="btn btn-danger btn-sm">                                    
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <uib-pager total-items="totalItems" ng-model="page" ng-change="loadAll()"></uib-pager>
+</div>

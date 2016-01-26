@@ -1,0 +1,24 @@
+{
+  "generator-jhipster": {
+    "baseName": "budget",
+    "packageName": "com.neiltolson.budget",
+    "packageFolder": "com/neiltolson/budget",
+    "authenticationType": "session",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": "no",
+    "useSass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "enableTranslation": false,
+    "enableSocialSignIn": true,
+    "rememberMeKey": "bb392e867bd4003ec25f9ad7b139797ab348d058",
+    "testFrameworks": [
+      "cucumber"
+    ]
+  }
+}

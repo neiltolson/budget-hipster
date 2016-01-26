@@ -1,0 +1,110 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myBudgetAccountLabel">Create or edit a BudgetAccount</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="budgetAccount.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_userId">UserId</label>
+            <input type="number" class="form-control" name="userId" id="field_userId"
+                    ng-model="budgetAccount.userId"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_accountType">AccountType</label>
+            <select class="form-control" name="accountType" ng-model="budgetAccount.accountType" id="field_accountType">
+                <option value="Checking">Checking</option>
+                <option value="Savings">Savings</option>
+                <option value="Investment">Investment</option>
+                <option value="Credit_Card">Credit_Card</option>
+                <option value="Loan">Loan</option>
+                <option value="Mortgage">Mortgage</option>
+                <option value="Emergency_Fund">Emergency_Fund</option>
+                <option value="Sinking_Fund">Sinking_Fund</option>
+                <option value="Prepaid_Card">Prepaid_Card</option>
+                <option value="Cash">Cash</option>
+                <option value="Other_Deposit">Other_Deposit</option>
+                <option value="Other_Debt">Other_Debt</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                    ng-model="budgetAccount.name"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_subAccountName">SubAccountName</label>
+            <input type="text" class="form-control" name="subAccountName" id="field_subAccountName"
+                    ng-model="budgetAccount.subAccountName"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_startDate">StartDate</label>
+            <input id="field_startDate" type="text" class="form-control" uib-datepicker-popup="{{dateformat}}" ng-model="budgetAccount.startDate" is-open="datePickerForStartDate.status.opened"
+            />
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="datePickerForStartDateOpen($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+            </span>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_endDate">EndDate</label>
+            <input id="field_endDate" type="text" class="form-control" uib-datepicker-popup="{{dateformat}}" ng-model="budgetAccount.endDate" is-open="datePickerForEndDate.status.opened"
+            />
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="datePickerForEndDateOpen($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+            </span>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_lastUpdated">LastUpdated</label>
+            <input id="field_lastUpdated" type="text" class="form-control" uib-datepicker-popup="{{dateformat}}" ng-model="budgetAccount.lastUpdated" is-open="datePickerForLastUpdated.status.opened"
+            />
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="datePickerForLastUpdatedOpen($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+            </span>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_status">Status</label>
+            <select class="form-control" name="status" ng-model="budgetAccount.status" id="field_status">
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_notes">Notes</label>
+            <input type="text" class="form-control" name="notes" id="field_notes"
+                    ng-model="budgetAccount.notes"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_startBalance">StartBalance</label>
+            <input type="number" class="form-control" name="startBalance" id="field_startBalance"
+                    ng-model="budgetAccount.startBalance"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_sortOrder">SortOrder</label>
+            <input type="number" class="form-control" name="sortOrder" id="field_sortOrder"
+                    ng-model="budgetAccount.sortOrder"
+                     />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

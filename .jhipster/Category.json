@@ -1,0 +1,29 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "userId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "categoryGroup",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "sortOrder",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20160124214947",
+    "dto": "no",
+    "service": "no",
+    "pagination": "no"
+}

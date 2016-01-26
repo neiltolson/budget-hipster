@@ -1,0 +1,69 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myBudgetLineItemLabel">Create or edit a BudgetLineItem</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="budgetLineItem.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_budgetAmount">BudgetAmount</label>
+            <input type="number" class="form-control" name="budgetAmount" id="field_budgetAmount"
+                    ng-model="budgetLineItem.budgetAmount"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_budgetLineItemType">BudgetLineItemType</label>
+            <select class="form-control" name="budgetLineItemType" ng-model="budgetLineItem.budgetLineItemType" id="field_budgetLineItemType">
+                <option value="Income">Income</option>
+                <option value="Carry_Over">Carry_Over</option>
+                <option value="Envelope">Envelope</option>
+                <option value="Autopay">Autopay</option>
+                <option value="Cash_Account">Cash_Account</option>
+                <option value="Credit_Account">Credit_Account</option>
+                <option value="Sinking_Fund">Sinking_Fund</option>
+                <option value="Paycheck_Deduction">Paycheck_Deduction</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_notes">Notes</label>
+            <input type="text" class="form-control" name="notes" id="field_notes"
+                    ng-model="budgetLineItem.notes"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_sortOrder">SortOrder</label>
+            <input type="number" class="form-control" name="sortOrder" id="field_sortOrder"
+                    ng-model="budgetLineItem.sortOrder"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label for="field_category">category</label>
+            <select class="form-control" id="field_category" name="category" ng-model="budgetLineItem.category" ng-options="category as category.name for category in categorys track by category.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="field_budget">budget</label>
+            <select class="form-control" id="field_budget" name="budget" ng-model="budgetLineItem.budget" ng-options="budget as budget.name for budget in budgets track by budget.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

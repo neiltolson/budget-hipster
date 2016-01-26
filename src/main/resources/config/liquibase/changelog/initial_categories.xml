@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+	<changeSet id="INITIAL_CATEGORIES" author="ADMIN">
+		<insert tableName="category">
+			<column name="category_group" value="Charity" />
+			<column name="name" value="Tithes" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Charity" />
+			<column name="name" value="Charity &amp; Other Offerings" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Savings" />
+			<column name="name" value="Emergency Fund" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Savings" />
+			<column name="name" value="Retirement Fund" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Savings" />
+			<column name="name" value="College Fund" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Housing" />
+			<column name="name" value="Mortgage / Rent" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Housing" />
+			<column name="name" value="2nd Mortgage" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Housing" />
+			<column name="name" value="Real Estate Taxes" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Housing" />
+			<column name="name" value="Repairs and Maintenance" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Housing" />
+			<column name="name" value="Association Dues" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Utilities" />
+			<column name="name" value="Electricity" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Utilities" />
+			<column name="name" value="Gas" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Utilities" />
+			<column name="name" value="Water" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Utilities" />
+			<column name="name" value="Trash" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Utilities" />
+			<column name="name" value="Phone" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Utilities" />
+			<column name="name" value="Internet" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Utilities" />
+			<column name="name" value="Cable" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Food" />
+			<column name="name" value="Groceries" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Food" />
+			<column name="name" value="Restaurants" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Clothing" />
+			<column name="name" value="Adults" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Clothing" />
+			<column name="name" value="Children" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Clothing" />
+			<column name="name" value="Cleaning / Laundry" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Transportation" />
+			<column name="name" value="Gas &amp; Oil" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Transportation" />
+			<column name="name" value="Repairs and Tires" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Transportation" />
+			<column name="name" value="License and Taxes" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Transportation" />
+			<column name="name" value="Car Replacement" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Transportation" />
+			<column name="name" value="Public Transportation" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Transportation" />
+			<column name="name" value="Parking Fees" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Medical" />
+			<column name="name" value="Precription Medications" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Medical" />
+			<column name="name" value="Doctor Bills" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Medical" />
+			<column name="name" value="Dentist" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Medical" />
+			<column name="name" value="Optomitrist" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Medical" />
+			<column name="name" value="Vitamins" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Medical" />
+			<column name="name" value="Over the Counter Medications" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Insurance" />
+			<column name="name" value="Life" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Insurance" />
+			<column name="name" value="Health" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Insurance" />
+			<column name="name" value="Homeowners / Renters" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Insurance" />
+			<column name="name" value="Auto" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Insurance" />
+			<column name="name" value="Disability" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Insurance" />
+			<column name="name" value="Identity Theft" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Insurance" />
+			<column name="name" value="Long Term Care" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Insurance" />
+			<column name="name" value="Umbrella" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Personal" />
+			<column name="name" value="Child Care" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Personal" />
+			<column name="name" value="Household" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Personal" />
+			<column name="name" value="Toiletries" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Personal" />
+			<column name="name" value="Cosmetics" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Personal" />
+			<column name="name" value="Education/Tuition" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Personal" />
+			<column name="name" value="Books/Supplies" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Personal" />
+			<column name="name" value="Child Support" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Personal" />
+			<column name="name" value="Alimony" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Personal" />
+			<column name="name" value="Subscriptions" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Personal" />
+			<column name="name" value="Dues" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Personal" />
+			<column name="name" value="Gifts" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Personal" />
+			<column name="name" value="Furniture" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Personal" />
+			<column name="name" value="Pocket Cash 1" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Personal" />
+			<column name="name" value="Pocket Cash 2" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Personal" />
+			<column name="name" value="Baby Supplies" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Personal" />
+			<column name="name" value="Pet Supplies" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Personal" />
+			<column name="name" value="Music" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Personal" />
+			<column name="name" value="Technology" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Personal" />
+			<column name="name" value="Personal Care" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Personal" />
+			<column name="name" value="Kids Allowance" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Personal" />
+			<column name="name" value="Miscellaneous" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Personal" />
+			<column name="name" value="Investment Fees" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Recreation" />
+			<column name="name" value="Entertainment" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Recreation" />
+			<column name="name" value="Vacation" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Debt" />
+			<column name="name" value="Car 1" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Debt" />
+			<column name="name" value="Car 2" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Debt" />
+			<column name="name" value="Credit Card 1" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Debt" />
+			<column name="name" value="Credit Card 2" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Debt" />
+			<column name="name" value="Credit Card 3" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Debt" />
+			<column name="name" value="Credit Card 4" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Debt" />
+			<column name="name" value="Credit Card 5" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Debt" />
+			<column name="name" value="Student Loan 1" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Debt" />
+			<column name="name" value="Student Loan 2" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Debt" />
+			<column name="name" value="Student Loan 3" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Debt" />
+			<column name="name" value="Student Loan 4" />
+		</insert>
+		<insert tableName="category">
+			<column name="category_group" value="Debt" />
+			<column name="name" value="Student Loan 5" />
+		</insert>
+
+	</changeSet>
+
+</databaseChangeLog>

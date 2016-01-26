@@ -1,0 +1,45 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "category",
+            "otherEntityName": "category",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "budget",
+            "otherEntityName": "budget",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "budgetAmount",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "budgetLineItemType",
+            "fieldType": "BudgetLineItemType",
+            "fieldValues": "Income, Carry_Over, Envelope, Autopay, Cash_Account, Credit_Account, Sinking_Fund, Paycheck_Deduction"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "notes",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "sortOrder",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20160124220821",
+    "dto": "no",
+    "service": "no",
+    "pagination": "no"
+}

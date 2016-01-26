@@ -1,0 +1,54 @@
+
+<div>
+    <h2><span>TransactionLineItem</span> {{transactionLineItem.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Field</th>
+                <th>Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span>Description</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{transactionLineItem.description}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Amount</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{transactionLineItem.amount}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>budgetLineItem</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="budgetLineItem.detail({id:transactionLineItem.budgetLineItem.id})">{{transactionLineItem.budgetLineItem.category.name}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>budgetAccountTransaction</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="budgetAccountTransaction.detail({id:transactionLineItem.budgetAccountTransaction.id})">{{transactionLineItem.budgetAccountTransaction.description}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+</div>

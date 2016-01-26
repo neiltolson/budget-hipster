@@ -1,0 +1,50 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myTransactionLineItemLabel">Create or edit a TransactionLineItem</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="transactionLineItem.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                    ng-model="transactionLineItem.description"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_amount">Amount</label>
+            <input type="number" class="form-control" name="amount" id="field_amount"
+                    ng-model="transactionLineItem.amount"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label for="field_budgetLineItem">budgetLineItem</label>
+            <select class="form-control" id="field_budgetLineItem" name="budgetLineItem" ng-model="transactionLineItem.budgetLineItem" ng-options="budgetLineItem as budgetLineItem.category.name for budgetLineItem in budgetlineitems track by budgetLineItem.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="field_budgetAccountTransaction">budgetAccountTransaction</label>
+            <select class="form-control" id="field_budgetAccountTransaction" name="budgetAccountTransaction" ng-model="transactionLineItem.budgetAccountTransaction" ng-options="budgetAccountTransaction as budgetAccountTransaction.description for budgetAccountTransaction in budgetaccounttransactions track by budgetAccountTransaction.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

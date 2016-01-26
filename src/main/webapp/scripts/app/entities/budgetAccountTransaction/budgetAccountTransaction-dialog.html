@@ -1,0 +1,89 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myBudgetAccountTransactionLabel">Create or edit a BudgetAccountTransaction</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="budgetAccountTransaction.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_transactionDate">TransactionDate</label>
+            <input id="field_transactionDate" type="text" class="form-control" uib-datepicker-popup="{{dateformat}}" ng-model="budgetAccountTransaction.transactionDate" is-open="datePickerForTransactionDate.status.opened"
+            />
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="datePickerForTransactionDateOpen($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+            </span>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_transactionType">TransactionType</label>
+            <select class="form-control" name="transactionType" ng-model="budgetAccountTransaction.transactionType" id="field_transactionType">
+                <option value="Purchase">Purchase</option>
+                <option value="Deposit">Deposit</option>
+                <option value="Transfer">Transfer</option>
+                <option value="Credit_Payment">Credit_Payment</option>
+                <option value="Purchase_Sink_Fund">Purchase_Sink_Fund</option>
+                <option value="Deposit_Sink_Fund">Deposit_Sink_Fund</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                    ng-model="budgetAccountTransaction.description"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_amount">Amount</label>
+            <input type="number" class="form-control" name="amount" id="field_amount"
+                    ng-model="budgetAccountTransaction.amount"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_notes">Notes</label>
+            <input type="text" class="form-control" name="notes" id="field_notes"
+                    ng-model="budgetAccountTransaction.notes"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_checkNumber">CheckNumber</label>
+            <input type="text" class="form-control" name="checkNumber" id="field_checkNumber"
+                    ng-model="budgetAccountTransaction.checkNumber"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_transferTransactionId">TransferTransactionId</label>
+            <input type="number" class="form-control" name="transferTransactionId" id="field_transferTransactionId"
+                    ng-model="budgetAccountTransaction.transferTransactionId"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_reconciledDate">ReconciledDate</label>
+            <input id="field_reconciledDate" type="text" class="form-control" uib-datepicker-popup="{{dateformat}}" ng-model="budgetAccountTransaction.reconciledDate" is-open="datePickerForReconciledDate.status.opened"
+            />
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="datePickerForReconciledDateOpen($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+            </span>
+        </div>
+
+        <div class="form-group">
+            <label for="field_budgetAccount">budgetAccount</label>
+            <select class="form-control" id="field_budgetAccount" name="budgetAccount" ng-model="budgetAccountTransaction.budgetAccount" ng-options="budgetAccount as budgetAccount.name for budgetAccount in budgetaccounts track by budgetAccount.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>
