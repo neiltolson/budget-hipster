@@ -2,13 +2,6 @@
     "relationships": [
         {
             "relationshipId": 1,
-            "relationshipName": "category",
-            "otherEntityName": "category",
-            "relationshipType": "many-to-one",
-            "otherEntityField": "name"
-        },
-        {
-            "relationshipId": 2,
             "relationshipName": "budget",
             "otherEntityName": "budget",
             "relationshipType": "many-to-one",
@@ -34,6 +27,16 @@
         },
         {
             "fieldId": 4,
+            "fieldName": "categoryGroup",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "categoryName",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 6,
             "fieldName": "sortOrder",
             "fieldType": "Integer"
         }

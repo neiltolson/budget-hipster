@@ -22,6 +22,8 @@ angular.module('budgetApp')
                 budgetAmount: null,
                 budgetLineItemType: null,
                 notes: null,
+                categoryGroup: null,
+                categoryName: null,
                 sortOrder: null,
                 id: null
             };

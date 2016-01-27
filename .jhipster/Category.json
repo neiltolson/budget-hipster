@@ -18,6 +18,11 @@
         },
         {
             "fieldId": 4,
+            "fieldName": "active",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldId": 5,
             "fieldName": "sortOrder",
             "fieldType": "Integer"
         }

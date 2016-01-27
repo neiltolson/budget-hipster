@@ -1,11 +1,10 @@
 'use strict';
 
 angular.module('budgetApp').controller('BudgetLineItemDialogController',
-    ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'BudgetLineItem', 'Category', 'Budget',
-        function($scope, $stateParams, $uibModalInstance, entity, BudgetLineItem, Category, Budget) {
+    ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'BudgetLineItem', 'Budget',
+        function($scope, $stateParams, $uibModalInstance, entity, BudgetLineItem, Budget) {
 
         $scope.budgetLineItem = entity;
-        $scope.categorys = Category.query();
         $scope.budgets = Budget.query();
         $scope.load = function(id) {
             BudgetLineItem.get({id : id}, function(result) {

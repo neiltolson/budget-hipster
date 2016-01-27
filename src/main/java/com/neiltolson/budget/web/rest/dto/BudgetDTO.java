@@ -1,17 +1,74 @@
 package com.neiltolson.budget.web.rest.dto;
 
+import java.time.LocalDate;
+import java.time.ZonedDateTime;
 import java.util.List;
 
 import com.neiltolson.budget.domain.enumeration.BudgetLineItemType;
+import com.neiltolson.budget.domain.enumeration.BudgetStatus;
 
 public class BudgetDTO {
 
+	private Long id;
+	private String name;
+	private LocalDate startDate;
+	private LocalDate endDate;
+	private ZonedDateTime lastUpdated;
+	private BudgetStatus status;
 	private LineItem carryOver;
 	private LineItem income;
 	private List<IncomeLine> incomeLines;
 	private List<CategoryGroup> expenses;
 	private LineItem total;
 	private List<LabelValuePair> budgetLinks;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public LocalDate getStartDate() {
+		return startDate;
+	}
+
+	public void setStartDate(LocalDate startDate) {
+		this.startDate = startDate;
+	}
+
+	public LocalDate getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(LocalDate endDate) {
+		this.endDate = endDate;
+	}
+
+	public ZonedDateTime getLastUpdated() {
+		return lastUpdated;
+	}
+
+	public void setLastUpdated(ZonedDateTime lastUpdated) {
+		this.lastUpdated = lastUpdated;
+	}
+
+	public BudgetStatus getStatus() {
+		return status;
+	}
+
+	public void setStatus(BudgetStatus status) {
+		this.status = status;
+	}
 
 	public LineItem getCarryOver() {
 		return carryOver;

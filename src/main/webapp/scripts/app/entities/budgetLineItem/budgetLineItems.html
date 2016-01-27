@@ -22,8 +22,9 @@
                     <th><span>BudgetAmount</span></th>
                     <th><span>BudgetLineItemType</span></th>
                     <th><span>Notes</span></th>
+                    <th><span>CategoryGroup</span></th>
+                    <th><span>CategoryName</span></th>
                     <th><span>SortOrder</span></th>
-                    <th><span>category</span></th>
                     <th><span>budget</span></th>
                     <th></th>
                 </tr>
@@ -34,10 +35,9 @@
                     <td>{{budgetLineItem.budgetAmount}}</td>
                     <td translate="{{'budgetApp.BudgetLineItemType.' + budgetLineItem.budgetLineItemType}}">{{budgetLineItem.budgetLineItemType}}</td>
                     <td>{{budgetLineItem.notes}}</td>
+                    <td>{{budgetLineItem.categoryGroup}}</td>
+                    <td>{{budgetLineItem.categoryName}}</td>
                     <td>{{budgetLineItem.sortOrder}}</td>
-                    <td>
-                        <a ui-sref="category.detail({id:budgetLineItem.category.id})">{{budgetLineItem.category.name}}</a>
-                    </td>
                     <td>
                         <a ui-sref="budget.detail({id:budgetLineItem.budget.id})">{{budgetLineItem.budget.name}}</a>
                     </td>

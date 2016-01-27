@@ -55,6 +55,7 @@ angular.module('budgetApp')
                                     userId: null,
                                     categoryGroup: null,
                                     name: null,
+                                    active: null,
                                     sortOrder: null,
                                     id: null
                                 };

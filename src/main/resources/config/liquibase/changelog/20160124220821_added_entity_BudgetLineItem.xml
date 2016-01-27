@@ -27,19 +27,16 @@
             
             <column name="notes" type="varchar(255)"/>
             
+            <column name="category_group" type="varchar(255)"/>
+            
+            <column name="category_name" type="varchar(255)"/>
+            
             <column name="sort_order" type="integer"/>
             
-            <column name="category_id" type="bigint"/>
             <column name="budget_id" type="bigint"/>
             <!-- jhipster-needle-liquibase-add-column - Jhipster will add columns here, do not remove-->
         </createTable>
         
-        <addForeignKeyConstraint baseColumnNames="category_id"
-                                 baseTableName="budget_line_item"
-                                 constraintName="fk_budgetlineitem_category_id"
-                                 referencedColumnNames="id"
-                                 referencedTableName="category"/>
-
         <addForeignKeyConstraint baseColumnNames="budget_id"
                                  baseTableName="budget_line_item"
                                  constraintName="fk_budgetlineitem_budget_id"

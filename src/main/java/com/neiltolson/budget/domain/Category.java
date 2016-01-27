@@ -28,6 +28,9 @@ public class Category implements Serializable {
     @Column(name = "name")
     private String name;
     
+    @Column(name = "active")
+    private Boolean active;
+    
     @Column(name = "sort_order")
     private Integer sortOrder;
     
@@ -61,6 +64,14 @@ public class Category implements Serializable {
     
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Boolean getActive() {
+        return active;
+    }
+    
+    public void setActive(Boolean active) {
+        this.active = active;
     }
 
     public Integer getSortOrder() {
@@ -98,6 +109,7 @@ public class Category implements Serializable {
             ", userId='" + userId + "'" +
             ", categoryGroup='" + categoryGroup + "'" +
             ", name='" + name + "'" +
+            ", active='" + active + "'" +
             ", sortOrder='" + sortOrder + "'" +
             '}';
     }

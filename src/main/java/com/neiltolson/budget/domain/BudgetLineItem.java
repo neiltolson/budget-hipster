@@ -34,13 +34,15 @@ public class BudgetLineItem implements Serializable {
     @Column(name = "notes")
     private String notes;
     
+    @Column(name = "category_group")
+    private String categoryGroup;
+    
+    @Column(name = "category_name")
+    private String categoryName;
+    
     @Column(name = "sort_order")
     private Integer sortOrder;
     
-    @ManyToOne
-    @JoinColumn(name = "category_id")
-    private Category category;
-
     @ManyToOne
     @JoinColumn(name = "budget_id")
     private Budget budget;
@@ -77,20 +79,28 @@ public class BudgetLineItem implements Serializable {
         this.notes = notes;
     }
 
+    public String getCategoryGroup() {
+        return categoryGroup;
+    }
+    
+    public void setCategoryGroup(String categoryGroup) {
+        this.categoryGroup = categoryGroup;
+    }
+
+    public String getCategoryName() {
+        return categoryName;
+    }
+    
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
+    }
+
     public Integer getSortOrder() {
         return sortOrder;
     }
     
     public void setSortOrder(Integer sortOrder) {
         this.sortOrder = sortOrder;
-    }
-
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
     }
 
     public Budget getBudget() {
@@ -128,6 +138,8 @@ public class BudgetLineItem implements Serializable {
             ", budgetAmount='" + budgetAmount + "'" +
             ", budgetLineItemType='" + budgetLineItemType + "'" +
             ", notes='" + notes + "'" +
+            ", categoryGroup='" + categoryGroup + "'" +
+            ", categoryName='" + categoryName + "'" +
             ", sortOrder='" + sortOrder + "'" +
             '}';
     }

@@ -49,6 +49,9 @@ public class CategoryResourceIntTest {
     private static final String DEFAULT_NAME = "AAAAA";
     private static final String UPDATED_NAME = "BBBBB";
 
+    private static final Boolean DEFAULT_ACTIVE = false;
+    private static final Boolean UPDATED_ACTIVE = true;
+
     private static final Integer DEFAULT_SORT_ORDER = 1;
     private static final Integer UPDATED_SORT_ORDER = 2;
 
@@ -81,6 +84,7 @@ public class CategoryResourceIntTest {
         category.setUserId(DEFAULT_USER_ID);
         category.setCategoryGroup(DEFAULT_CATEGORY_GROUP);
         category.setName(DEFAULT_NAME);
+        category.setActive(DEFAULT_ACTIVE);
         category.setSortOrder(DEFAULT_SORT_ORDER);
     }
 
@@ -103,6 +107,7 @@ public class CategoryResourceIntTest {
         assertThat(testCategory.getUserId()).isEqualTo(DEFAULT_USER_ID);
         assertThat(testCategory.getCategoryGroup()).isEqualTo(DEFAULT_CATEGORY_GROUP);
         assertThat(testCategory.getName()).isEqualTo(DEFAULT_NAME);
+        assertThat(testCategory.getActive()).isEqualTo(DEFAULT_ACTIVE);
         assertThat(testCategory.getSortOrder()).isEqualTo(DEFAULT_SORT_ORDER);
     }
 
@@ -120,6 +125,7 @@ public class CategoryResourceIntTest {
                 .andExpect(jsonPath("$.[*].userId").value(hasItem(DEFAULT_USER_ID.intValue())))
                 .andExpect(jsonPath("$.[*].categoryGroup").value(hasItem(DEFAULT_CATEGORY_GROUP.toString())))
                 .andExpect(jsonPath("$.[*].name").value(hasItem(DEFAULT_NAME.toString())))
+                .andExpect(jsonPath("$.[*].active").value(hasItem(DEFAULT_ACTIVE.booleanValue())))
                 .andExpect(jsonPath("$.[*].sortOrder").value(hasItem(DEFAULT_SORT_ORDER)));
     }
 
@@ -137,6 +143,7 @@ public class CategoryResourceIntTest {
             .andExpect(jsonPath("$.userId").value(DEFAULT_USER_ID.intValue()))
             .andExpect(jsonPath("$.categoryGroup").value(DEFAULT_CATEGORY_GROUP.toString()))
             .andExpect(jsonPath("$.name").value(DEFAULT_NAME.toString()))
+            .andExpect(jsonPath("$.active").value(DEFAULT_ACTIVE.booleanValue()))
             .andExpect(jsonPath("$.sortOrder").value(DEFAULT_SORT_ORDER));
     }
 
@@ -160,6 +167,7 @@ public class CategoryResourceIntTest {
         category.setUserId(UPDATED_USER_ID);
         category.setCategoryGroup(UPDATED_CATEGORY_GROUP);
         category.setName(UPDATED_NAME);
+        category.setActive(UPDATED_ACTIVE);
         category.setSortOrder(UPDATED_SORT_ORDER);
 
         restCategoryMockMvc.perform(put("/api/categorys")
@@ -174,6 +182,7 @@ public class CategoryResourceIntTest {
         assertThat(testCategory.getUserId()).isEqualTo(UPDATED_USER_ID);
         assertThat(testCategory.getCategoryGroup()).isEqualTo(UPDATED_CATEGORY_GROUP);
         assertThat(testCategory.getName()).isEqualTo(UPDATED_NAME);
+        assertThat(testCategory.getActive()).isEqualTo(UPDATED_ACTIVE);
         assertThat(testCategory.getSortOrder()).isEqualTo(UPDATED_SORT_ORDER);
     }
 

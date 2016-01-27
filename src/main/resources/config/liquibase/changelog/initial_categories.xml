@@ -7,314 +7,470 @@
 
 	<changeSet id="INITIAL_CATEGORIES" author="ADMIN">
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="100" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Charity" />
 			<column name="name" value="Tithes" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="110" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Charity" />
 			<column name="name" value="Charity &amp; Other Offerings" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="120" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Savings" />
 			<column name="name" value="Emergency Fund" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="130" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Savings" />
 			<column name="name" value="Retirement Fund" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="140" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Savings" />
 			<column name="name" value="College Fund" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="150" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Housing" />
 			<column name="name" value="Mortgage / Rent" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="160" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Housing" />
 			<column name="name" value="2nd Mortgage" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="170" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Housing" />
 			<column name="name" value="Real Estate Taxes" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="180" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Housing" />
 			<column name="name" value="Repairs and Maintenance" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="190" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Housing" />
 			<column name="name" value="Association Dues" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="200" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Utilities" />
 			<column name="name" value="Electricity" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="210" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Utilities" />
 			<column name="name" value="Gas" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="220" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Utilities" />
 			<column name="name" value="Water" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="230" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Utilities" />
 			<column name="name" value="Trash" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="240" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Utilities" />
 			<column name="name" value="Phone" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="250" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Utilities" />
 			<column name="name" value="Internet" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="260" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Utilities" />
 			<column name="name" value="Cable" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="270" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Food" />
 			<column name="name" value="Groceries" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="280" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Food" />
 			<column name="name" value="Restaurants" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="290" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Clothing" />
 			<column name="name" value="Adults" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="300" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Clothing" />
 			<column name="name" value="Children" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="310" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Clothing" />
 			<column name="name" value="Cleaning / Laundry" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="320" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Transportation" />
 			<column name="name" value="Gas &amp; Oil" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="330" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Transportation" />
 			<column name="name" value="Repairs and Tires" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="340" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Transportation" />
 			<column name="name" value="License and Taxes" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="350" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Transportation" />
 			<column name="name" value="Car Replacement" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="360" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Transportation" />
 			<column name="name" value="Public Transportation" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="370" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Transportation" />
 			<column name="name" value="Parking Fees" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="380" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Medical" />
-			<column name="name" value="Precription Medications" />
+			<column name="name" value="Prescription Medications" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="390" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Medical" />
 			<column name="name" value="Doctor Bills" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="400" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Medical" />
 			<column name="name" value="Dentist" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="410" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Medical" />
-			<column name="name" value="Optomitrist" />
+			<column name="name" value="Optometrist" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="420" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Medical" />
 			<column name="name" value="Vitamins" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="430" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Medical" />
 			<column name="name" value="Over the Counter Medications" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="440" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Insurance" />
 			<column name="name" value="Life" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="450" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Insurance" />
 			<column name="name" value="Health" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="460" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Insurance" />
 			<column name="name" value="Homeowners / Renters" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="470" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Insurance" />
 			<column name="name" value="Auto" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="480" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Insurance" />
 			<column name="name" value="Disability" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="490" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Insurance" />
 			<column name="name" value="Identity Theft" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="500" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Insurance" />
 			<column name="name" value="Long Term Care" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="510" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Insurance" />
 			<column name="name" value="Umbrella" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="520" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Personal" />
 			<column name="name" value="Child Care" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="530" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Personal" />
 			<column name="name" value="Household" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="540" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Personal" />
 			<column name="name" value="Toiletries" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="550" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Personal" />
 			<column name="name" value="Cosmetics" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="560" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Personal" />
 			<column name="name" value="Education/Tuition" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="570" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Personal" />
 			<column name="name" value="Books/Supplies" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="580" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Personal" />
 			<column name="name" value="Child Support" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="590" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Personal" />
 			<column name="name" value="Alimony" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="600" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Personal" />
 			<column name="name" value="Subscriptions" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="610" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Personal" />
 			<column name="name" value="Dues" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="620" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Personal" />
 			<column name="name" value="Gifts" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="630" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Personal" />
 			<column name="name" value="Furniture" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="640" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Personal" />
 			<column name="name" value="Pocket Cash 1" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="650" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Personal" />
 			<column name="name" value="Pocket Cash 2" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="660" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Personal" />
 			<column name="name" value="Baby Supplies" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="670" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Personal" />
 			<column name="name" value="Pet Supplies" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="680" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Personal" />
 			<column name="name" value="Music" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="690" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Personal" />
 			<column name="name" value="Technology" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="700" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Personal" />
 			<column name="name" value="Personal Care" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="710" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Personal" />
 			<column name="name" value="Kids Allowance" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="720" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Personal" />
 			<column name="name" value="Miscellaneous" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="730" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Personal" />
 			<column name="name" value="Investment Fees" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="740" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Recreation" />
 			<column name="name" value="Entertainment" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="750" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Recreation" />
 			<column name="name" value="Vacation" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="760" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Debt" />
 			<column name="name" value="Car 1" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="770" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Debt" />
 			<column name="name" value="Car 2" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="780" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Debt" />
 			<column name="name" value="Credit Card 1" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="790" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Debt" />
 			<column name="name" value="Credit Card 2" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="800" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Debt" />
 			<column name="name" value="Credit Card 3" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="810" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Debt" />
 			<column name="name" value="Credit Card 4" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="820" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Debt" />
 			<column name="name" value="Credit Card 5" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="830" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Debt" />
 			<column name="name" value="Student Loan 1" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="840" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Debt" />
 			<column name="name" value="Student Loan 2" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="850" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Debt" />
 			<column name="name" value="Student Loan 3" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="860" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Debt" />
 			<column name="name" value="Student Loan 4" />
 		</insert>
 		<insert tableName="category">
+			<column name="sort_order" valueNumeric="870" />
+			<column name="active" valueBoolean="true" />
 			<column name="category_group" value="Debt" />
 			<column name="name" value="Student Loan 5" />
 		</insert>

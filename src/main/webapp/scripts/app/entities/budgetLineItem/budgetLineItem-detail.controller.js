@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('budgetApp')
-    .controller('BudgetLineItemDetailController', function ($scope, $rootScope, $stateParams, entity, BudgetLineItem, Category, Budget) {
+    .controller('BudgetLineItemDetailController', function ($scope, $rootScope, $stateParams, entity, BudgetLineItem, Budget) {
         $scope.budgetLineItem = entity;
         $scope.load = function (id) {
             BudgetLineItem.get({id: id}, function(result) {
